@@ -7,15 +7,6 @@
   "contributors": [
     "Joshua Byrd <phocks@gmail.com>"
   ],
-  "aunty": {
-    "deploy": {
-      "contentftp": {
-        "files": "**",
-        "from": "build",
-        "to": "/www/res/sites/news-projects/<name>/<id>"
-      }
-    }
-  },
   "scripts": {
     "start": "aunty serve"
   },

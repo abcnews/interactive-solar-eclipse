@@ -1,13 +1,15 @@
-const Preact = require("preact");
+/** @jsx h */
+
+const {Component, h} = require("preact");
 
 // const HTML = require("./html");
 const Australia = require("./australia");
 const World = require("./world");
 
-const styles = require("./app.scss");
+const styles = require("./app.scss").default;
 
 
-class App extends Preact.Component {
+class App extends Component {
   render() {
       const { type } = this.props;
 

@@ -1,6 +1,6 @@
-const Preact = require('preact');
+const { h, Component } = require("preact");
 
-class HTML extends Preact.Component {
+class HTML extends Component {
     shouldComponentUpdate() {
         return false;
     }

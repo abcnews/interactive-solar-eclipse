@@ -1,4 +1,6 @@
-const Preact = require("preact");
+/** @jsx h */
+
+const { h, Component } = require("preact");
 const topojson = require("topojson");
 const select = require("d3-selection");
 const geo = require("d3-geo");
@@ -6,7 +8,7 @@ const request = require("d3-request");
 const shape = require("d3-shape");
 const scale = require("d3-scale");
 
-const styles = require("./australia.scss");
+const styles = require("./australia.scss").default;
 
 const width = 800,
   height = 550,
@@ -27,7 +29,7 @@ const colorScale = scale
   .domain([2017, 2117])
   .range(["MEDIUMSEAGREEN", "SLATEBLUE"]);
 
-class Australia extends Preact.Component {
+class Australia extends Component {
   componentWillMount() {}
   componentDidMount() {
     const svg = select
@@ -150,10 +152,7 @@ class Australia extends Preact.Component {
         return d.color;
       })
       .style("font-weight", "bold")
-      .style(
-        "font-family",
-        '"ABCSans","Interval Sans Pro",Arial,Helvetica,sans-serif'
-      );
+      .style("font-family", '"ABCSans","Interval Sans Pro",Arial,Helvetica,sans-serif');
 
     // A small dataset of cities to map
     const cities = [
@@ -231,22 +230,14 @@ class Australia extends Preact.Component {
             Within the next 50 years
             <br />
             <svg width="50" height="10">
-              <rect
-                width="50"
-                height="10"
-                style="fill:rgba(226, 122, 59, 0.5)"
-              />
+              <rect width="50" height="10" style="fill:rgba(226, 122, 59, 0.5)" />
             </svg>
           </div>
           <div>
             Within the next 100 years
             <br />
             <svg width="50" height="10">
-              <rect
-                width="50"
-                height="10"
-                style="fill:rgba(59, 195, 226, 0.5)"
-              />
+              <rect width="50" height="10" style="fill:rgba(59, 195, 226, 0.5)" />
             </svg>
           </div>
         </div>
@@ -254,7 +245,7 @@ class Australia extends Preact.Component {
           <div
             id="map"
             className={styles.scalingSvgContainer}
-            style={"padding-bottom: " + height / width * 100 + "%"}
+            style={"padding-bottom: " + (height / width) * 100 + "%"}
           />
         </div>
       </div>

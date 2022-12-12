@@ -1,4 +1,6 @@
-const Preact = require("preact");
+/** @jsx h */
+
+const { h, Component } = require("preact");
 const topojson = require("topojson");
 const select = require("d3-selection");
 const geo = require("d3-geo");
@@ -8,7 +10,7 @@ const scale = require("d3-scale");
 const geoProj = require("d3-geo-projection");
 const timer = require("d3-timer");
 
-const styles = require("./world.scss");
+const styles = require("./world.scss").default;
 
 const width = 500,
   height = 400,
@@ -32,7 +34,7 @@ const colorScale = scale
   .domain([2017, 2117])
   .range(["MEDIUMSEAGREEN", "SLATEBLUE"]);
 
-class World extends Preact.Component {
+class World extends Component {
   componentWillMount() {}
   componentDidMount() {
     const svg = select

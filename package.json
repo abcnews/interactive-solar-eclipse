@@ -1,30 +1,30 @@
 {
-  "name": "solar-eclipse",
-  "version": "1.0.6",
-  "description": "A look at solar eclipses within the next 100 years in Australia and around the world",
-  "license": "MIT",
-  "private": true,
-  "contributors": [
-    "Joshua Byrd <phocks@gmail.com>"
-  ],
-  "scripts": {
-    "start": "aunty serve"
-  },
-  "devDependencies": {
-    "@abcnews/aunty": "^13.2.2",
-    "babel-preset-preact": "^2.0.0",
-    "prettier": "^1.5.3"
-  },
-  "dependencies": {
-    "d3-geo": "^1.6.4",
-    "d3-geo-projection": "^2.2.0",
-    "d3-request": "^1.0.5",
-    "d3-scale": "^1.0.6",
-    "d3-selection": "^1.1.0",
-    "d3-shape": "^1.2.0",
-    "d3-timer": "^1.0.6",
-    "preact": "^10.11.3",
-    "preact-compat": "^3.16.0",
-    "topojson": "^3.0.0"
-  }
+	"name": "solar-eclipse",
+	"version": "2.0.0",
+	"description": "A look at solar eclipses within the next 100 years in Australia and around the world",
+	"license": "MIT",
+	"private": true,
+	"contributors": [
+		"Joshua Byrd <phocks@gmail.com>"
+	],
+	"scripts": {
+		"start": "aunty serve"
+	},
+	"devDependencies": {
+		"@abcnews/aunty": "^13.2.2",
+		"babel-preset-preact": "^2.0.0",
+		"prettier": "^1.5.3"
+	},
+	"dependencies": {
+		"d3-geo": "^1.6.4",
+		"d3-geo-projection": "^2.2.0",
+		"d3-request": "^1.0.5",
+		"d3-scale": "^1.0.6",
+		"d3-selection": "^1.1.0",
+		"d3-shape": "^1.2.0",
+		"d3-timer": "^1.0.6",
+		"preact": "^10.11.3",
+		"preact-compat": "^3.16.0",
+		"topojson": "^3.0.0"
+	}
 }
